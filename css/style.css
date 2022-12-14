@@ -1,7 +1,148 @@
-.example-block{
-    height: 400px;
-    box-shadow: 2px 2px 2px;
-    background-size: contain;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/250px-Flag_of_the_United_States_%28Pantone%29.svg.png");
-    margin: 20px;
+body {
+    font-family: 'Franklin Gothic Medium', sans-serif;
 }
+
+nav {
+    background-color: #2A3E51;
+    height: 61px;
+    width: 100%;
+}
+
+
+.logo {
+    color: white;
+    font-size: 28px;
+    line-height: 61px;
+    margin-left: 388px;
+    float: left;
+}
+
+.menu {
+    float: left;
+    padding-left: 430px;
+}
+
+.menu li {
+    float: left;
+    line-height: 61px;
+    margin-left: 40px;
+}
+
+.menu li a {
+    color: white;
+}
+
+.main {
+    width: 100%;
+    height: calc(100% - 60px);
+    background: url("../img/shadow_1.png") 10% 99.9%/auto no-repeat, url("../img/People.png") 90% 100%/auto 85% no-repeat, url("../img/main_1.png") center/cover no-repeat;
+
+}
+/** Первый блок **/
+.welcome__container {
+    float: left;
+    margin: 423px 0px 0px 404px;
+    color: #2c384a;
+    text-align: center;
+}
+
+.welcome__container > h1 {
+    font-size: 84px;
+    font-weight: bold;
+}
+
+.welcome__container > h4 {
+    margin-top: 23px;
+    font-size: 21px;
+    font-weight: bold;
+    color: #79818D;
+}
+
+.welcome__container input {
+    height: 40px;
+    text-align: center;
+    border: 2px solid #6d7682;
+    background: none;
+    border-radius: 5px;
+    color: #6d7682;
+    font-size: 13px;
+    padding: 0px 16px;
+    margin: 47px 14px 0px 14px;
+}
+
+/** Второй блок **/
+
+.about__container {
+    margin: 98px 0px 98px 0px;
+}
+
+h4.title_block {
+    color: #263244;
+    font-size: 34px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.about__container p {
+    font-family: 'Calibri', sans-serif;
+
+    font-size: 17px;
+    margin-left: 579px;
+    width: 763px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.orange_line {
+    background: #EA7800;
+    width: 72px;
+    height: 4px;
+    margin-left: 920px;
+    margin-top: 20px;
+}
+
+.mini_photo {
+    margin: 44px auto 38px;
+    display: block;
+}
+.about__container a{
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #6d7682;
+    background: url("../img/downloadICO.png") no-repeat 10%;
+    border-radius: 5px;
+    color: #6d7682;
+    font-size: 13px;
+    margin: 35px 14px 14px 892px;
+    padding: 7px 9px 7px 36px;
+
+}
+
+/** Третий блок **/
+
+.skills{
+    background: url("../img/third_block_backgroung.png") center/auto no-repeat;
+    padding: 101px 0px 75px 0px;
+    height: 523px;
+}
+
+.skills_array{
+float: left;
+    margin-left: 414px;
+}
+
+.skills_item{
+    float: left;
+    width: 216px;
+}
+
+.skills_item h3{
+    font-family: 'Bahnschrift', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 20px;
+    color: #CF7600;
+    margin: 30px 60px 17.5px 60px;
+}
+
