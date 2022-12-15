@@ -370,13 +370,13 @@ h4.title_block {
 
 /** Шестой блок **/
 
-.statistics{
+.statistics {
     background: url("../img/static_background.png") center/auto no-repeat;
     padding: 101px 0px 75px 0px;
     height: 523px;
 }
 
-.statistics_array{
+.statistics_array {
     float: left;
     position: sticky;
     display: block;
@@ -416,5 +416,61 @@ h4.title_block {
 .statistics_icon {
     margin: 44px auto 30px;
     display: block;
+}
 
+/** Седьмой блок **/
+
+.review__container {
+    margin: 101px 0px 75px 0px;
+}
+
+.review__container .slider_description {
+    width: 710px;
+    letter-spacing: -1px;
+    margin: 48px auto 27px;
+    font-family: 'Calibri', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    line-height: 21px;
+}
+
+.review__container .slider_title {
+    width: 300px;
+    margin: 0px auto 48px;
+    font-family: 'Calibri', sans-serif;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.orange_slider_dot {
+    display: flex;
+    justify-content: center;
+
+}
+
+.nav_dot {
+    background: url("../img/gray_dot.png") center/auto no-repeat;
+    width: 10px;
+    height: 10px;
+    margin-right: 14px;
+}
+
+.orange_slider_dot .active {
+    background: url("../img/orange_dot.png") center/auto no-repeat;
+    width: 10px;
+    height: 10px;
+    margin-right: 14px;
+}
+
+/** Восьмой блок **/
+
+.contacts{
+    background: url("../img/contact.png") center/auto no-repeat;
+}
+
+.contacts__container{
+    margin-top: 101px;
 }
