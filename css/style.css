@@ -38,6 +38,7 @@ nav {
     background: url("../img/shadow_1.png") 10% 99.9%/auto no-repeat, url("../img/People.png") 90% 100%/auto 85% no-repeat, url("../img/main_1.png") center/cover no-repeat;
 
 }
+
 /** Первый блок **/
 .welcome__container {
     float: left;
@@ -105,7 +106,8 @@ h4.title_block {
     margin: 44px auto 38px;
     display: block;
 }
-.about__container a{
+
+.about__container a {
     display: inline-block;
     text-align: center;
     border: 2px solid #6d7682;
@@ -120,29 +122,299 @@ h4.title_block {
 
 /** Третий блок **/
 
-.skills{
+.skills {
     background: url("../img/third_block_backgroung.png") center/auto no-repeat;
     padding: 101px 0px 75px 0px;
     height: 523px;
+
 }
 
-.skills_array{
-float: left;
-    margin-left: 414px;
+.skills_array {
+    float: left;
+    position: sticky;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-55%, 25%);
+
 }
 
-.skills_item{
+.skills_item {
     float: left;
     width: 216px;
 }
 
-.skills_item h3{
+.skills_item h3 {
+    text-align: center;
     font-family: 'Bahnschrift', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 19px;
     line-height: 20px;
     color: #CF7600;
-    margin: 30px 60px 17.5px 60px;
+
 }
 
+.skills_item p {
+    font-family: 'Calibri', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #3F495A;
+    margin-top: 18px;
+}
+
+.skills_icon {
+    margin: 44px auto 30px;
+    display: block;
+
+}
+
+/** Четвертый блок **/
+
+.portfolio_container {
+    margin: 101px 0px 150px 0px;
+}
+
+.portfolio_container > p {
+    font-family: 'Calibri', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: -1px;
+    margin-top: 63px;
+    margin-left: 605px;
+}
+
+.portfolio_container img {
+
+    margin: 38px 0px 37px 389px;
+}
+
+.portfolio_container .description {
+
+    width: 1170px;
+    margin: 39px 0px 0px 389px;
+}
+
+.portfolio_container .description_left {
+
+    display: inline-block;
+    margin-right: 84px;
+}
+
+.portfolio_container .description_left h3 {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    text-transform: uppercase;
+    color: #384354;
+    letter-spacing: -1.5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 21px;
+}
+
+.portfolio_container .description_left p {
+    font-family: 'Calibri', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: -1px;
+    color: #3F495A;
+    margin: 7px 0px 7px 0px;
+}
+
+.portfolio_container .description_left a {
+    display: inline-block;
+    margin-top: 15px;
+    background: #63B5AE;
+    padding: 11px 43px 12px 43px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 20px;
+    letter-spacing: -1.25px;
+    text-transform: uppercase;
+}
+
+.portfolio_container .description_right {
+    display: inline-block;
+    width: 859px;
+    position: absolute;
+}
+
+.portfolio_container .description_right h4 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 21px;
+    letter-spacing: -1.5px;
+    color: #384354;
+}
+
+.portfolio_container .description_right p {
+    font-family: 'Calibri', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: -1.25px;
+    color: #3F495A;
+    margin-top: 8px;
+}
+
+/** Пятый блок **/
+
+.calc {
+    margin: 5px 0px 150px 0px;
+}
+
+.calc__container {
+    width: 891px;
+    margin-left: 571px;
+}
+
+.calc__container h1 {
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 52px;
+    letter-spacing: -3px;
+    color: #1C2534;
+    margin-left: 218px;
+    margin-bottom: 65px;
+}
+
+.calc__container h4 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 33px;
+    color: #1C2534;
+    margin: 22px 0px 37px 0px;
+}
+
+.calc__container .type__list__site {
+    width: 891px;
+    height: 57px;
+    padding: 19px 0px 19px 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 19px;
+    appearance: none;
+    color: #737373;
+    background: #EEEEEE url('../img/down.png') no-repeat 98% 60%;
+}
+
+.type__list__value {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 19px;
+    margin-left: 24px;
+    border-radius: 0;
+}
+
+.gray_line {
+    background: #EEEEEE;
+    height: 2px;
+    margin: 36px 0px 15px 0px;
+}
+
+.calc__footer {
+    width: 891px;
+}
+
+.calc__footer .days {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between
+
+}
+
+.calc__footer .price {
+    display: flex;
+
+}
+
+.calc__footer .days {
+    display: flex;
+
+}
+
+
+.calc__footer .title {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24px;
+    width: auto;
+    flex-grow: 1;
+    color: #1C2534;
+
+}
+
+.calc__footer .count {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #1C2534;
+}
+
+/** Шестой блок **/
+
+.statistics{
+    background: url("../img/static_background.png") center/auto no-repeat;
+    padding: 101px 0px 75px 0px;
+    height: 523px;
+}
+
+.statistics_array{
+    float: left;
+    position: sticky;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-55%, 25%);
+}
+
+.statistics_item {
+    float: left;
+    width: 216px;
+}
+
+.statistics h3 {
+    text-align: center;
+    font-family: 'Impact', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 37.5px;
+    line-height: 20px;
+    color: #323E4F;
+
+}
+
+.statistics p {
+    font-family: 'Calibri', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+    color: #3F495A;
+    margin-top: 32px;
+}
+
+.statistics_icon {
+    margin: 44px auto 30px;
+    display: block;
+
+}
