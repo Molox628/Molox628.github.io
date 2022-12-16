@@ -137,7 +137,6 @@ h4.title_block {
     left: 50%;
     margin-right: -50%;
     transform: translate(-55%, 25%);
-
 }
 
 .skills_item {
@@ -411,6 +410,7 @@ h4.title_block {
     text-align: center;
     color: #3F495A;
     margin-top: 32px;
+    letter-spacing: -1px;
 }
 
 .statistics_icon {
@@ -467,10 +467,155 @@ h4.title_block {
 
 /** Восьмой блок **/
 
-.contacts{
+.contacts {
     background: url("../img/contact.png") center/auto no-repeat;
 }
 
-.contacts__container{
-    margin-top: 101px;
+.contacts__container {
+    padding-top: 101px;
+    padding-bottom: 88px;
 }
+
+.contacts__container .title_block {
+    color: #FFFFFF;
+}
+
+.contacts__container > p {
+    font-family: 'Calibri', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    margin-left: 662px;
+    margin-top: 43px;
+    margin-bottom: 36px;
+}
+
+.contacts_array {
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.contacts_item {
+    float: left;
+    width: 160px;
+    margin-right: 83px;
+}
+
+.contact_icon {
+    margin: auto;
+    display: block;
+
+}
+
+.contact_description {
+    font-family: 'Calibri', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.contact__form {
+    width: 732px;
+    margin-left: 595px;
+}
+
+.contact__form h4 {
+    display: block;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 30px;
+    margin: 60px 0px 30px 240px;
+    letter-spacing: -1.25px;
+    color: #FFFFFF;
+}
+
+.contact__form textarea {
+    width: 732px;
+    height: 94px;
+    background: rgba(238, 238, 238, 0.85);
+    mix-blend-mode: screen;
+    letter-spacing: -1px;
+    font-size: 17px;
+    padding-left: 12px;
+    padding-top: 3px;
+}
+
+.form_array {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.form_array input {
+    padding-left: 12px;
+    font-weight: 100;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+    color: #5D5D5E;
+}
+
+.form_array button {
+    color: white;
+}
+
+.form_array .name {
+    background: rgba(238, 238, 238, 0.85);
+    width: 352px;
+    mix-blend-mode: screen;
+    margin-right: 28px;
+    height: 34px;
+}
+
+.form_array .email {
+    background: rgba(238, 238, 238, 0.85);
+    width: 352px;
+    mix-blend-mode: screen;
+    height: 34px;
+}
+
+.sent {
+    text-align: center;
+    border: 2px solid #F9FAFF;
+    background: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 21px;
+    padding: 10px 19px 10px 20px;
+    margin-left: 302px;
+    margin-top: 28px;
+}
+
+
+.map {
+    background: url("../img/maps.png") center/auto no-repeat;
+
+    height: 351px;
+}
+
+footer {
+    height: 90px;
+    background: #2A3E51;
+}
+
+footer p {
+    color: white;
+    font-family: 'ArialMT', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    align-items: center;
+    letter-spacing: -1.25px;
+    line-height: 90px;
+}
+
