@@ -2,10 +2,67 @@ body {
     font-family: 'Franklin Gothic Medium', sans-serif;
 }
 
+loadscreen{
+    opacity: 1;
+    animation: load_page 5s forwards;
+
+}
+
+loader{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-right: auto;
+    opacity: 1;
+    animation: unload_loader 6s forwards;
+}
+
+loader img{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+
+@keyframes load_page {
+    from{
+
+        opacity: 0;
+
+
+    }
+
+    to{
+
+        opacity: 1;
+
+
+    }
+}
+
+@keyframes unload_loader {
+    from{
+
+        opacity: 1;
+
+    }
+
+    to{
+
+        opacity: 0;
+    }
+}
+
+
+
 nav {
     background-color: #2A3E51;
     height: 61px;
     width: 100%;
+    position: fixed;
+    z-index: 2;
 }
 
 
@@ -15,7 +72,19 @@ nav {
     line-height: 61px;
     margin-left: 388px;
     float: left;
+    animation: visible 2s ease;
 }
+
+@keyframes visible {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
 
 .menu {
     float: left;
@@ -26,18 +95,69 @@ nav {
     float: left;
     line-height: 61px;
     margin-left: 40px;
+    animation: menu_jump ease 0.4s forwards;
+    opacity: 0;
 }
+
+
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+
+@keyframes menu_jump {
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
 
 .menu li a {
     color: white;
+    transition: all 0.1s;
+    transform: scale(1);
+    display: inline-block;
 }
 
 .main {
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url("../img/shadow_1.png") 10% 99.9%/auto no-repeat, url("../img/People.png") 90% 100%/auto 85% no-repeat, url("../img/main_1.png") center/cover no-repeat;
 
 }
+
+.menu li a:visited{
+    color: #FFFFFF;
+}
+
+.menu li a:hover{
+    color: #ff9708;
+}
+
+.menu li a:active{
+    transform: scale(1.1);
+}
+
 
 /** Первый блок **/
 .welcome__container {
@@ -45,6 +165,22 @@ nav {
     margin: 423px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    animation: moveds 1s forwards;
+    animation-delay: 2.4s;
+    opacity: 0;
+
+}
+
+@keyframes moveds {
+    from{
+        opacity: 0;
+        margin-left: -600px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 404px;
+    }
+
 }
 
 .welcome__container > h1 {
@@ -69,6 +205,17 @@ nav {
     font-size: 13px;
     padding: 0px 16px;
     margin: 47px 14px 0px 14px;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+.welcome__container input:hover {
+background: #2A3E51;
+    color: #FFFFFF;
+}
+
+.welcome__container input:active {
+    transform: scale(1.1);
 }
 
 /** Второй блок **/
@@ -120,12 +267,31 @@ h4.title_block {
 
 }
 
+.about__container a:hover {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #6d7682;
+    background: url("../img/downloadICO_white.png") no-repeat 10%, #2A3E51;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 35px 14px 14px 892px;
+    padding: 7px 9px 7px 36px;
+    transition: all 0.1s;
+    transform: scale(1);
+}
+
+.about__container a:active {
+    transform: scale(1.1);
+}
+
 /** Третий блок **/
 
 .skills {
-    background: url("../img/third_block_backgroung.png") center/auto no-repeat;
     padding: 101px 0px 75px 0px;
     height: 523px;
+    background: url("../img/third_block_backgroung.png") no-repeat fixed center;
+    background-size: cover;
 
 }
 
@@ -142,7 +308,14 @@ h4.title_block {
 .skills_item {
     float: left;
     width: 216px;
+    transition: 0.2s all;
+    transform: scale(1);
 }
+
+.skills_item:hover{
+    transform: scale(1.1);
+}
+
 
 .skills_item h3 {
     text-align: center;
@@ -238,7 +411,14 @@ h4.title_block {
     font-size: 20px;
     letter-spacing: -1.25px;
     text-transform: uppercase;
+    transition: all 0.2s;
+    transform: scale(1);
 }
+
+.portfolio_container .description_left a:active {
+    transform: scale(1.1);
+}
+
 
 .portfolio_container .description_right {
     display: inline-block;
@@ -309,6 +489,10 @@ h4.title_block {
     background: #EEEEEE url('../img/down.png') no-repeat 98% 60%;
 }
 
+.type__list__value{
+border-radius: 0px;
+}
+
 .type__list__value {
     font-style: normal;
     font-weight: 400;
@@ -370,9 +554,11 @@ h4.title_block {
 /** Шестой блок **/
 
 .statistics {
-    background: url("../img/static_background.png") center/auto no-repeat;
     padding: 101px 0px 75px 0px;
     height: 523px;
+
+    background: url("../img/static_background.png") no-repeat fixed center;
+    background-size: cover;
 }
 
 .statistics_array {
@@ -388,6 +574,12 @@ h4.title_block {
 .statistics_item {
     float: left;
     width: 216px;
+    transition: 0.2s all;
+    transform: scale(1);
+}
+
+.statistics_item:hover{
+    transform: scale(1.1);
 }
 
 .statistics h3 {
@@ -563,7 +755,11 @@ h4.title_block {
     align-items: center;
     letter-spacing: -1px;
     color: #5D5D5E;
+
 }
+
+
+
 
 .form_array button {
     color: white;
@@ -594,8 +790,13 @@ h4.title_block {
     padding: 10px 19px 10px 20px;
     margin-left: 302px;
     margin-top: 28px;
+    transition: all 0.2s;
+    transform: scale(1);
 }
 
+.sent:active {
+    transform: scale(1.1);
+}
 
 .map {
     background: url("../img/maps.png") center/auto no-repeat;
@@ -618,4 +819,3 @@ footer p {
     letter-spacing: -1.25px;
     line-height: 90px;
 }
-
