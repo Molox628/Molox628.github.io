@@ -1,90 +1,36 @@
-/**ul {
-    margin: 60px;
-    font-size: 18px;
-    width: 50px;
-}
-
-li{
-    margin-bottom: 30px;
-}
-
-li::after {
-    content: "🐈";
-}
-
-li::before {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #ff0000;
-    margin-right: 10px;
-}
-
-
-li::before{
-    display: block;
-    width: 100%;
-    height: 2px;
-    transform: scaleX(0);
-    background-color: red;
-    transition: all 0.1s;
-}
-
-li:hover::before{
-    transform: scaleX(1);
-}**/
-
-body {
-}
-
-.box span {
-    display: block;
-    text-align: center;
-    line-height: 100px;
-}
-
-.box {
-    width: 100px;
-    height: 100px;
+.fff1{
+    margin: 50px;
+    width: 200px;
+    height: 200px;
     border: 2px solid black;
-    background-color: azure;
-    animation-name: move, bg-color;
-    animation-duration: 400ms;
-    animation-timing-function: ease;
-    animation-direction: alternate;
-    animation-fill-mode: backwards;
 }
 
-@keyframes move {
-    0% {
-        background: #ab07ff;
-
-    }
-
-    100% {
-        background: #5aff02;
-
-
-    }
-
+.fff2{
+    margin: 50px;
+    width: 400px;
+    height: 200px;
+    border: 2px solid black;
 }
 
-@keyframes bg-color {
-    0% {
-
-        margin-left: 0px;
+@media (max-width: 500px) {
+    .fff1{
+display: block;
     }
 
-    100% {
+    .fff2{
+        display: none;
+    }
+}
 
-        margin-left: 100px;
-
+@media (min-width: 500px) {
+    .fff2{
+        display: block;
     }
 
+    .fff1{
+        display: none;
+    }
 }
 
-.box:hover{
-    animation-play-state: paused;
-}
+
 
