@@ -150,6 +150,23 @@ nav {
 
 }
 
+@media (max-width: 992px) {
+    .main{
+        position: relative;
+    }
+    .main:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0,0,0,0.6);
+        z-index: 1;
+    }
+}
+
+
 .menu li a:visited {
     color: #FFFFFF;
 }
