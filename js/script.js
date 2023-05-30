@@ -1,38 +1,90 @@
 "use strict"
 
-let summ = 0;
-let days = 0;
+window.onload = function () {
+    let preloader = $('#preloader');
+    preloader.addClass("hide-preloader");
+    setInterval(function () {
+        preloader.addClass("preloader-hidden");
+    }, 990);
+    calc();
 
-const titles = [
-    "Тип сайта? 1 - Лендинг 2 - Интернет магазин", "Тип дизайна? 1 - Шаблон 2 - Уникальный", "Адаптивность 1 - Нет 2 - есть"
-];
+    setTimeout(function (){
+        new bootstrap.Modal(document.getElementById('welcome')).show();
+    }, 10000);
 
-const prices = [[100, 1000], [100, 1000], [0, 1000]];
-const dayss = [[1, 2], [1, 2], [1, 2]];
-
-let objects = [];
-
-function position(value, index) {
-    this.prices = prices[index][--value];
-    this.days = dayss[index][value];
 }
 
-function enter(title){
-   let res = prompt(title);
-   let check = prices[res];
-   if(!check){
-       enter(title);
-   }
-   return res;
+$(document).ready(function() {
+$('a[href^="#"]').click(function(event) {
+    event.preventDefault();
+    var target = $(this.hash);
+    if (target.length) {
+        console.log(target.offset().top);
+        $('html, body').animate({
+            scrollTop: target.offset().top - $('.navs').outerHeight()
+        }, 200);
+    }
+});
+});
+
+
+let id_selectors = ["#type__list__site", "#type__list__front", "#type__list__adaptive"];
+
+let price_dev = {
+    "#type__list__site": [
+        {"id": 1, "price": 1000, "days": 1},
+        {"id": 2, "price": 2000, "days": 2},
+        {"id": 3, "price": 3000, "days": 3}
+    ],
+    "#type__list__front": [
+        {"id": 1, "price": 1000, "days": 1},
+        {"id": 2, "price": 2000, "days": 2},
+        {"id": 3, "price": 3000, "days": 3}
+    ],
+    "#type__list__adaptive": [
+        {"id": 1, "price": 2000, "days": 2},
+        {"id": 2, "price": 1000, "days": 1}
+    ],
 }
 
-titles.forEach(function (title, index) {
-    objects[index] = new position(enter(title), index);
+
+function calc() {
+    let summ = 0;
+    let days = 0;
+    id_selectors.forEach(function (selector_itr, index) {
+        let id = $(selector_itr).val();
+        days += price_dev[selector_itr][--id]['days'];
+        summ += price_dev[selector_itr][id]['price'];
+    });
+    $('#ins_days').text(days);
+    $('#ins_sum').text(summ);
+}
+
+
+
+
+
+$('.nav_dot').click(function (e) {
+    e.preventDefault();
+    let id = $('div.nav_dot.active').attr('data-id');
+    let open_slide_id = $(this).attr('data-id');
+    let query = " div.slide_rev[data-id=" + id + "]";
+    $(query).addClass('hide-slide');
+    $(".slide_rev[data-id=" + id + "]").removeClass('slide_active');
+    $(" div.slide_rev[data-id=" + open_slide_id + "]").addClass('slide_active');
+    $(query).removeClass('hide-slide');
+    $(".nav_dot").removeClass('active');
+    $(this).addClass('active');
+
+})
+
+
+$('img.popup-link').magnificPopup({
+    type: 'image'
 });
 
-objects.forEach(function (name) {
-    summ += name.prices;
-    days += name.days;
-});
 
-alert('Сумма к оплате ' + summ + ' рубль(-ей). Заказ будет готов через ' + days + ' день(-ей).');
+
+
+
+
